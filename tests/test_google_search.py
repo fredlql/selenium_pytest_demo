@@ -3,6 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+import os
+os.makedirs("reports", exist_ok=True)
+
 def test_google_search(driver):
     #driver.get("https://www.google.com")
     google = GooglePage(driver)
