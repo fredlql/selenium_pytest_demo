@@ -29,7 +29,7 @@ pipeline {
                 sh '''
                     mkdir -p reports
                     . $VENV_DIR/bin/activate
-                    pytest --junitxml=reports/test-results.xml
+                   PYTHONPATH=. pytest --junitxml=reports/test-results.xml
                 '''
             }
         }

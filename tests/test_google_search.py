@@ -1,9 +1,12 @@
-from pages.google_page import GooglePage
+from pages.google_pages import GooglePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+import sys
 import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 os.makedirs("reports", exist_ok=True)
 
 def test_google_search(driver):
