@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-
+os.makedirs("reports", exist_ok=True)
 
 def pytest_addoption(parser):
     parser.addoption(
