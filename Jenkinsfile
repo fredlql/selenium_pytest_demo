@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    
+    triggers {
+    cron('H/15 * * * *')
+  }
     environment {
         PYTHONPATH = "${env.WORKSPACE}"
         VENV_DIR = "venv"
